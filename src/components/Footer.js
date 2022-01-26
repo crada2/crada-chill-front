@@ -11,13 +11,13 @@ const Footer = () => {
           © 2021 Crada, Inc. All rights reserved
         </p>
         <div className="d-flex flex-row-reverse">
-          <a class="p-2 m-2 btn btn-info rounded-pill">
+          <a class="p-2 btn-outline-danger rounded-circle">
             <BsFacebook />
           </a>
-          <a class="p-2 m-2 btn btn-info rounded-pill">
+          <a class="p-2 btn-outline-danger rounded-circle">
             <BsInstagram />
           </a>
-          <a class="p-2 m-2 btn btn-info rounded-pill">
+          <a class="p-2 btn-outline-danger rounded-circle">
             <BsTwitter />
           </a>
         </div>
