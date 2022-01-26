@@ -20,6 +20,8 @@ const Card = () => {
           <h5 className="card-title">🍿Card title movie </h5>
 
           <i className="card-text">Nombre director</i>
+          <p><i className="fs-6 text"> Gender: Science fiction </i></p>
+          
           <div
             class="btn-group p-2 m-2 "
             role="group"

@@ -2,18 +2,14 @@ import React from "react";
 
 const Header = () => {
   return (
-    <nav class="navbar navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img
-            src="/docs/5.1/assets/brand/bootstrap-logo.svg"
-            alt=""
-            width="30"
-            height="24"
-          />
-        </a>
+    <header className="navbar navbar-light">
+      <div className="container-fluid" style={{ background: "#0A0A0A" }}>
+     {/*  <img src="./assets/img/logo.png" alt=""> */}
+         
+        
+        
       </div>
-    </nav>
+    </header>
   );
 };
 
