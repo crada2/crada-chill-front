@@ -8,7 +8,9 @@ function App() {
     <div className="App">
       <Header />
       <Card />
-      <Footer />
+      <div className="container">
+        <Footer />
+      </div>
     </div>
   );
 }
