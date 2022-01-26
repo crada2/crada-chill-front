@@ -1,4 +1,6 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Press+Start+2P&family=Raleway:wght@400;700&display=swap');
+
+App {
   text-align: center;
 }
 
@@ -36,3 +38,25 @@
     transform: rotate(360deg);
   }
 }
+header.masthead {
+  text-align: center;
+  color: #fff;
+  background-image: url(./assets/img/hero.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  
+  
+}
+header h1 {
+  
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.5;
+  padding-top: 100px;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 10px;
+  font-weight: 900
+}
+
