@@ -60,21 +60,16 @@ header h1 {
   padding-bottom: 10px;
   font-weight: 900
 }
-/*
-.navbar-L {
-  background-color: #000000;
-  background-image: url(./assets/img/palomitas.png);
-  background-repeat: no-repeat;
-  background-size: 45px;
-  
+.btn-outline-primary {
+  background-color: #f44336;
+  border-color: #0d6efd;
 }
-.navbar-R {
-  background-color: #000000;
-  background-image: url(./assets/img/logoCradaChill.png);
-  background-repeat: no-repeat;
-  background-size: 450px;
-}*/
-.navbar01 {
-  background-color: #000000;
+
+
+.container2 {
+  display:flex;
+ justify-content: space-between;
+ padding-block: 20px;
+ margin-left: 5px;
+
 }
- 

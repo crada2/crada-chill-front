@@ -10,7 +10,7 @@ const Footer = () => {
         <p className="text-light m-2 p-2">
           © 2021 Crada, Inc. All rights reserved
         </p>
-        <div className="d-flex flex-row-reverse">
+        <div className="d-flex flex-row-reverse ">
           <a class="p-2 btn-outline-danger rounded-circle">
             <BsFacebook />
           </a>

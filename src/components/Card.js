@@ -1,25 +1,46 @@
-import React from "react";
+import React, { useEffect } from "react";
+
 
 const Card = () => {
+
+  const [movies, setMovies] = React.useState([]);
+
+  useEffect(() => {
+    fetch ("http://localhost:8080/movies")
+    .then(res=>res.json())
+    .then((result) => {
+      setMovies(result);
+    }
+  )
+  }, [])
+
   return (
+
+    
+
     <div
-      className="p-3 m-3 d-flex justify-content-center "
+      className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"
       style={{ background: "#0A0A0A" }}
     >
+
+    {movies.map(movie => (
+
       <div className="card p-1 m-3 " style={{ width: "16rem" }}>
         <img
           className="card-img-top"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9Esa5hk256pfM68WifavLRncrp9_DxdhMufTGMUiWiU16P9XfOVeaMXRc7BS5HPYhbBo&usqp=CAU"
-          alt="Card image cap"
+          src={movie.image}
+          alt=""
         />
         <button class="rounded-3 btn btn-secondary btn-sm opacity-75">
-          9,7
+         {movie.score}
         </button>
 
         <div className="card-body">
-          <h5 className="card-title">🍿Card title movie </h5>
+          <h5 className="card-title">🍿{movie.name} </h5>
 
-          <i className="card-text">Nombre director</i>
+          <i className="card-text">{movie.director}</i>
+          <p><i className="fs-6 text"> {movie.genre}</i></p>
+          
           <div
             class="btn-group p-2 m-2 "
             role="group"
@@ -35,8 +56,11 @@ const Card = () => {
           </div>
         </div>
       </div>
+    ))
+  } 
     </div>
   );
 };
+   
 
 export default Card;
