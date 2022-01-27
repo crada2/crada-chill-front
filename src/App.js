@@ -1,16 +1,21 @@
 import "./App.css";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Card from "./components/Card";
-import Footer from "./components/Footer";
+import { Routes, Route, Outlet, Link } from "react-router-dom";
+
+import Landing from "./pages/Landing";
+import Form from "./pages/Form";
+
+import Layout from "./components/Layout";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Hero />
-      <Card />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Landing />} />
+          <Route path="form" element={<Form />} />
+          {/* <Route path="dashboard" element={<Dashboard />} /> */}
+        </Route>
+      </Routes>
     </div>
   );
 }
