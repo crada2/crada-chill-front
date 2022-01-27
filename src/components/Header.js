@@ -15,7 +15,7 @@ const Header = () => {
       
     
     
-      <a class="navbar-L" href="#">
+      <a class="navbar-L">
         <img src={require ('../assets/img/palomitas.png')} alt=""  width="50" />
       </a>
 
