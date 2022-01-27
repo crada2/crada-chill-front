@@ -1,4 +1,6 @@
 import React from "react";
+//import {Redirect} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Form = () => {
   const [image, setImage] = React.useState("");
@@ -6,6 +8,7 @@ const Form = () => {
   const [name, setName] = React.useState("");
   const [director, setDirector] = React.useState("");
   const [genre, setGenre] = React.useState("");
+  
 
   const handleChangeImage = (event) => {
     setImage(event.target.value);
@@ -39,6 +42,8 @@ const Form = () => {
       console.log("new movie added");
     });
   };
+
+  
 
   return (
     <form>
@@ -95,10 +100,11 @@ const Form = () => {
         </div>
         <button
           type="button"
-          class="btn btn-outline-secondary"
+          class="btn btn-outline-primary"
           onClick={handleClick}
         >
-          Submit
+          <Link to='/' >  Submit </Link>
+         
         </button>
       </div>
     </form>

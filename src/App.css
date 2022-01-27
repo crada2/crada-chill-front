@@ -59,4 +59,7 @@ header h1 {
   padding-bottom: 10px;
   font-weight: 900
 }
-
+.btn-outline-primary {
+  background-color: #f44336;
+  border-color: #0d6efd;
+}
