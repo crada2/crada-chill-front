@@ -8,7 +8,6 @@ const Form = () => {
   const [name, setName] = React.useState("");
   const [director, setDirector] = React.useState("");
   const [genre, setGenre] = React.useState("");
-  
 
   const handleChangeImage = (event) => {
     setImage(event.target.value);
@@ -42,8 +41,6 @@ const Form = () => {
       console.log("new movie added");
     });
   };
-
-  
 
   return (
     <form>
@@ -100,11 +97,10 @@ const Form = () => {
         </div>
         <button
           type="button"
-          class="btn btn-outline-primary"
+          class="btn btn-danger"
           onClick={handleClick}
         >
-          <Link to='/' >  Submit </Link>
-         
+          <Link class="link-light text-decoration-none" to="/"> Submit </Link>
         </button>
       </div>
     </form>
