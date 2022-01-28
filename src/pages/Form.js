@@ -1,8 +1,9 @@
 import React from "react";
-//import {Redirect} from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const Form = () => {
+  const navigate = useNavigate();
+
   const [image, setImage] = React.useState("");
   const [score, setScore] = React.useState("");
   const [name, setName] = React.useState("");
@@ -32,75 +33,70 @@ const Form = () => {
   const handleClick = (event) => {
     event.preventDefault();
     const movie = { image, score, name, director, genre };
-    console.log(movie);
     fetch("http://localhost:8080/movies", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(movie),
     }).then(() => {
-      console.log("new movie added");
+      navigate("/");
     });
   };
 
   return (
     <form>
       <div className="container">
-        <div class="form-group">
+        <div className="form-group">
           <label for="formGroupExampleInput2">Image</label>
           <input
             type="text"
             value={image}
             onChange={handleChangeImage}
-            class="form-control"
+            className="form-control"
             placeholder="Image"
           />
         </div>
-        <div class="form-group">
+        <div className="form-group">
           <label for="formGroupExampleInput2">Score</label>
           <input
             type="number"
             value={score}
             onChange={handleChangeScore}
-            class="form-control"
+            className="form-control"
             placeholder="Score"
           />
         </div>
-        <div class="form-group">
+        <div className="form-group">
           <label for="formGroupExampleInput2">Name</label>
           <input
             type="text"
             value={name}
             onChange={handleChangeName}
-            class="form-control"
+            className="form-control"
             placeholder="Title"
           />
         </div>
-        <div class="form-group">
+        <div className="form-group">
           <label for="formGroupExampleInput2">Director</label>
           <input
             type="text"
             value={director}
             onChange={handleChangeDirector}
-            class="form-control"
+            className="form-control"
             placeholder="Director"
           />
         </div>
-        <div class="form-group">
+        <div className="form-group">
           <label for="formGroupExampleInput2">Genre</label>
           <input
             type="text"
             value={genre}
             onChange={handleChangeGenre}
-            class="form-control"
+            className="form-control"
             placeholder="Genre"
           />
         </div>
-        <button
-          type="button"
-          class="btn btn-danger"
-          onClick={handleClick}
-        >
-          <Link class="link-light text-decoration-none" to="/"> Submit </Link>
+        <button type="button" className="btn btn-danger" onClick={handleClick}>
+          Submit
         </button>
       </div>
     </form>

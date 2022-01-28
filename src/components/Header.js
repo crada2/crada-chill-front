@@ -3,18 +3,23 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <nav class="container" style={{  height: "7rem"  }}>
-      <div class="container2">
-
-      <Link class="navbar-R" href="#" to="/"> 
-       <img src={require ('../assets/img/logoCradaChill.png')} alt="" width="450"/>
-       </Link>
-  
-      <a>
-      <img src={require ('../assets/img/palomitas.png')} alt=""  width="50" />
-      </a>
-
-      </div> 
+    <nav className="container" style={{ height: "7rem" }}>
+      <div className="container2">
+        <Link className="navbar-R" href="#" to="/">
+          {/* <img
+            src={require("../assets/img/logoCradaChill.png")}
+            alt=""
+            width="520"
+          /> */}
+        </Link>
+        <Link className="navbar-R" href="#" to="/">
+          <img
+            src={require("../assets/img/palomitass.png")}
+            alt=""
+            width="80"
+          />
+        </Link>
+      </div>
     </nav>
   );
 };
